@@ -38,3 +38,6 @@ The system is fully containerized and orchestrated using *Docker Compose*, separ
    ```bash
    git clone [https://github.com/Zubir-wr/ZubirGBT.git](https://github.com/Zubir-wr/ZubirGBT.git)
    cd ZubirGBT
+
+<img width="1892" height="906" alt="Screenshot 2026-10-20 064057" src="https://github.com/user-attachments/assets/9918d751-cc89-43ba-91a6-b469ace5bafb" />
+
