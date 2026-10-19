@@ -1,0 +1,41 @@
+version: '3.8'
+
+services:
+  web:
+    container_name: ai-project-web
+    build: ./web
+    ports:
+      - "3000:3000"
+    depends_on:
+      - db
+      - ollama
+    environment:
+      - DATABASE_URL=postgres://user:password@db:5432/chatdb
+
+  ollama:
+    container_name: ai-project-ollama
+    image: ollama/ollama:latest
+    ports:
+      - "11434:11434"
+    volumes:
+      - ollama_data:/root/.ollama
+
+  db:
+    container_name: ai-project-db
+    image: postgres:15-alpine
+    environment:
+      POSTGRES_USER: user
+      POSTGRES_PASSWORD: password
+      POSTGRES_DB: chatdb
+    ports:
+      - "5432:5432"
+    networks:
+      default:
+        aliases:
+          - db
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+
+volumes:
+  ollama_data:
+  postgres_data:

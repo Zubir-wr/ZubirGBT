@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ZubirGBT</title>
+    <link rel="icon" type="image/png" href="favicon.png">
+    <!-- External CSS file link -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="header">
+        <h1>ZubirGBT</h1>
+        <p>Test work</p>
+    </div>
+
+    <!-- Chat messages container -->
+    <div id="chat-flow" class="chat-container"></div>
+
+    <!-- Input and controls bar -->
+    <div class="input-bar">
+        <div class="input-container-inner">
+            <div id="file-preview">
+                📄 Image: <span id="file-name"></span>
+                <button onclick="removeFile()" class="btn-remove">✖</button>
+            </div>
+            
+            <div class="input-wrapper">
+                <label class="icon-btn" title="Upload Image for OCR">
+                    📷 <input type="file" id="image-input" accept="image/*" style="display:none;" onchange="handleFileSelect(event)">
+                </label>
+                
+                <button id="mic-btn" class="icon-btn" onclick="toggleVoiceInput()" title="Start Voice Conversation">🎙️</button>                
+                <input type="text" id="user-input" placeholder="Talk with assistant or type your question..." onkeypress="handleKeyPress(event)">
+                <button class="send-btn" onclick="sendMessage()">Send</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- External Libraries & Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/tesseract.js@5/dist/tesseract.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
