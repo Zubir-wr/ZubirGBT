@@ -54,9 +54,9 @@
    ```bash
    docker compose up -d
 
-   <img width="1892" height="906" alt="Screenshot 2026-10-20 064057" src="https://github.com/user-attachments/assets/71cb6615-ce26-4903-a875-b69d7fceac7c" />
    
 
+<img width="1892" height="906" alt="Screenshot 2026-10-20 064057" src="https://github.com/user-attachments/assets/d7eef25e-4f28-403f-b7c2-4df48ea2c7ed" />
 
 
 
