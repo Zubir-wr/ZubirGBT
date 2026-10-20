@@ -1,43 +1,50 @@
-# ZubirGBT 
+#Project Steps
 
-*ZubirGBT* is a full-stack, containerized local AI platform designed for private, high-performance chat interactions and AI workflows. Powered by open-source LLMs running locally, it ensures total data privacy without relying on third-party cloud APIs.
+Phase 1: Environment Setup & Prerequisites
+​Install Core Tools:
+​Install Docker Desktop and enable Virtualization features in your system BIOS.
+​Install Git for version control and repository management.
+​Install Node.js and PostgreSQL for local development.
+​Storage Management:
+​Clean up the C drive and remove unused heavy applications (such as Anaconda) to ensure the Docker Engine runs smoothly without disk space errors.
+​🏗️ Phase 2: Project Development & Architecture
+​Setting Up Structure and Files:
+​Create the core project structure and write the server.js file for the Node.js / Express application.
+​Set up frontend files (index.html and CSS) to provide an interactive and smooth chat interface.
+​Database & AI Engine Integration:
+​Connect the backend server to PostgreSQL for storing chat logs and message history.
+​Integrate with the Ollama engine running locally on port 11434 to power local LLMs (like Llama 3.2).
+​Containerization (Docker & Compose):
+​Create a Dockerfile to containerize the Node.js application.
+​Set up the docker-compose.yml file to orchestrate all services (frontend, database, and Ollama) into a unified environment.
+​Configure the .gitignore file to exclude heavy files and system directories from being pushed to GitHub.
+​🚀 Phase 3: Pushing to GitHub
+1- Initialize Local Git Repository:
+git init
+git add .
+git commit -m "Initial commit: ZubirGBT clean project code"
+2- Link to Remote Repository:
+git branch -M main
+git remote add origin https://github.com/Zubir-wr/ZubirGBT.git
+3- Push Code to GitHub:
+git push -u origin main
+4- Add Documentation:
 
----
+Create and commit a README.md file on GitHub detailing the project architecture, features, and step-by-step instructions.
 
-## 🏗️ Architecture & Tech Stack
+Phase 4: Running and Testing the Project
+1- Start Containers via Docker Compose:
+docker compose up -d
+Access the Interface and Test:
 
-The system is fully containerized and orchestrated using *Docker Compose*, separating concerns across dedicated microservices:
+2- Open your web browser and navigate to http://localhost:3000.
 
-* *Frontend & Backend Server:* Built with *Node.js* and *Express*, providing an interactive web interface running on port 3000.
-* *Local LLM Engine:* Powered by *Ollama*, running local models like Llama 3.2 on port 11434.
-* *Database:*
-*PostgreSQL* running on port 5432 for robust message logging and persistent chat history.
-* *AI Agent:* A dedicated backend service handling agentic workflows and tool execution.
+Send queries to test the local AI model's responses and verify persistent chat history.
 
----
+<img width="1892" height="906" alt="Screenshot 2026-10-20 064057" src="https://github.com/user-attachments/assets/89d355e9-b153-4718-ada6-1c4b146d2845" />
+<img width="1718" height="908" alt="Screenshot 2026-10-20 064356" src="https://github.com/user-attachments/assets/887760c8-c152-4250-bf11-d85e00c6ce6f" />
+<img width="1845" height="807" alt="Screenshot 2026-10-20 064425" src="https://github.com/user-attachments/assets/a7aeda3c-9ced-4c68-ba21-35a3318385d1" />
 
-## ✨ Features
 
-- 🔒 *100% Private & Local:* All conversation data and AI model execution remain local on your machine.
-- 💬 *Persistent History:* Full chat history and logs saved with PostgreSQL integration.
-- 🎨 *Visual Generation Integration:* Native capability for prompt detection and image generation.
-- 🐳 *Dockerized Setup:* Clean service isolation with zero-downtime deployment using Docker Compose.
 
----
-
-## 🛠️ Getting Started
-
-### Prerequisites
-
-* [Docker Desktop](https://www.docker.com/products/docker-desktop/) installed and running.
-* [Node.js](https://nodejs.org/) (optional, for local development outside containers).
-
-### Installation & Running
-
-1. *Clone the repository:*
-   ```bash
-   git clone [https://github.com/Zubir-wr/ZubirGBT.git](https://github.com/Zubir-wr/ZubirGBT.git)
-   cd ZubirGBT
-
-<img width="1892" height="906" alt="Screenshot 2026-10-20 064057" src="https://github.com/user-attachments/assets/9918d751-cc89-43ba-91a6-b469ace5bafb" />
 
